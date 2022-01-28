@@ -24,13 +24,13 @@ module.exports = class ProductController {
         res.redirect('/products')
     }
 
-    // static async getProduct(req, res) {
-    //         const id = req.params.id
+    static async getProduct(req, res) {
+            const id = req.params.id
 
-    //     const product = await Product.getProductsById(id)
+        const product = await Product.findById(id).lean()
 
-    //     res.render('products/product', { product })
-    // }
+        res.render('products/product', { product })
+    }
 
     // static async removeProduct(req, res) {
     //     const id = req.params.id
