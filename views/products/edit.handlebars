@@ -1,5 +1,5 @@
 <h1>Editar Produto</h1> 
-<form action="/products/create" method="POST">
+<form action="/products/edit/" method="POST">
     <input type="hidden" name="id" value="{{product._id}}">
     <div class="form-control">
         <label for="name">Nome do Produto:</label>
@@ -17,5 +17,5 @@
         <label for="description">Descrição:</label>
         <textarea name="description" placeholder="Descrição do produto">{{product.description}}</textarea>
     </div>
-    <input type="submit" value="Cadastrar" class="btn">
+    <input type="submit" value="Editar" class="btn">
 </form>
